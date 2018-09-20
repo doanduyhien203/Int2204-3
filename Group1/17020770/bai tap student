@@ -1,0 +1,57 @@
+package bai3;
+
+public class StudentManagement {
+	
+	public static boolean SameGroup(Student s1,Student s2)
+	{
+		if(s1.getGroup().equals(s2.getGroup()))
+		{
+			return true;
+		}
+		else return false;
+	}
+	
+	
+	public Student[] HS = new Student[100]; 
+	
+	public void studentsByGroup() {
+		String a,b;
+		Student Swap;
+		for(int i=0;HS[i]!=null;++i)
+		{
+			for(int j=i+1;HS[j]!=null;++j)
+			{
+				a=HS[i].getGroup();
+				b=HS[j].getGroup();
+				if(a.compareTo(b)!=0)
+				{
+					Swap = HS[i];
+					HS[i] = HS[j];
+					HS[j] = Swap;
+				}
+			}
+		}
+	}
+	
+	
+	
+	public static void main(String[] arg) {
+		Student Hoang = new Student();
+		
+		Hoang.setName(" nguyen viet hoang ");
+		Hoang.setId("17020770");
+		Hoang.setGroup("INT2204_3");
+		Hoang.setEmail("17020770uet.vnu@gmail.com");
+		
+		
+		Student anh = new Student("anh","17026969","anh@gmail.com");
+		
+		if(SameGroup(Hoang,anh))
+				{
+					System.out.println(" SameGroup");
+				}
+		else System.out.println(" NotSameGroup");
+		
+	}
+	
+}
