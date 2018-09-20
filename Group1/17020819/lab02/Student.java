@@ -1,5 +1,3 @@
-package com.company;
-
 public class Student {
     private String name, id, group, email;     //khai bao thuoc tinh cua doi tuong sinh vien
 
