@@ -1,6 +1,3 @@
-
-package com.company;
-
     public class StudentManagement {
         private Student[] students = new Student[100];
 
