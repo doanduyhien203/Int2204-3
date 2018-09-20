@@ -12,7 +12,7 @@
             int i;
             System.out.println("Danh sach sinh vien lop INT22041: ");
 
-            for(i = 0; i < std.length; ++i) {
+            for(i = 0; i < students.length; ++i) {
                 if (this.students[i].getGroup().equals("INT22041"))
                 {
                     System.out.println("Sinh vien thu " + (i + 1) + ":" + this.students[i].getInfo());
@@ -21,7 +21,7 @@
 
             System.out.println("Danh sach sinh vien lop INT22042");
 
-            for(i = 0; i < std.length; ++i) {
+            for(i = 0; i < student.length; ++i) {
                 if (this.students[i].getGroup().equals("INT22042")) {
                     System.out.println("Sinh vien thu " + (i + 1) + ":" + this.students[i].getInfo());
                 }
