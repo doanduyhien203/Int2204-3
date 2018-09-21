@@ -8,28 +8,29 @@
 
         public void studentsByGroup()
         {
+            int dem = 0,j;
+            for(i=0;students[i]!=null;i++)
+            {
+                dem++;
+                students[i]=false;
+            }
+        
+            for(int i=0;students[i]!=null;i++)
+            {
+                System.out.println("Danh sach sinh vien lop "+students[i].getGroup() + ":");
 
-            int i;
-            System.out.println("Danh sach sinh vien lop INT22041: ");
-
-            for(i = 0; i < students.length; ++i) {
-                if (this.students[i].getGroup().equals("INT22041"))
+                for(int j=i;students[j]!=null;j++)
                 {
-                    System.out.println("Sinh vien thu " + (i + 1) + ":" + this.students[i].getInfo());
-                }
+                    if(sameGroup(students[i], students[j]) == true && students[i]==false)
+                    {
+                    
+                    System.out.println(students[j].getInfo());
+                    System.out.println("======================");
+                    students[j]=true;
+                    }
+                }     
             }
-
-            System.out.println("Danh sach sinh vien lop INT22042");
-
-            for(i = 0; i < student.length; ++i) {
-                if (this.students[i].getGroup().equals("INT22042")) {
-                    System.out.println("Sinh vien thu " + (i + 1) + ":" + this.students[i].getInfo());
-                }
-            }
-
         }
-
-
 
         public void removeStudent(String id) {
             int i,j;
